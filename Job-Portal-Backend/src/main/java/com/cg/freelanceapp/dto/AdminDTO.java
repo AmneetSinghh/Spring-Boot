@@ -10,6 +10,7 @@ import javax.validation.constraints.NotEmpty;
 @Setter
 @ToString
 @EqualsAndHashCode
+@Builder
 public class AdminDTO {
 
 	@NotEmpty(message = "userName cant be empty")
