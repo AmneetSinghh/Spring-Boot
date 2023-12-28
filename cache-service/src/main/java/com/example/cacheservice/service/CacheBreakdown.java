@@ -2,9 +2,9 @@ package com.example.cacheservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+
 /*
 1. try code with not using TTL.
 2. try code with TTL
@@ -13,9 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class CacheBreakdown {
 
-    /*
-     Need of static keyword in this class, as always object will be one, becuase of singleton.
-     */
+
 
     @Autowired
     private RedisService redisService;
@@ -140,7 +138,6 @@ public class CacheBreakdown {
         for(int i=0;i<threads.length;i++){
             threads[i].start();
         }
-
 
     }
 }
